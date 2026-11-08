@@ -1,27 +1,570 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JSON Formatter &amp; Validator — Format JSON Online Free | Redsite</title>
-<meta name="description" content="Format, validate, and minify JSON online for free. Fix indentation and check syntax instantly in your browser. No uploads, account, or tracking.">
-<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://json.redsite.in/">
-<meta name="theme-color" content="#0A0A0A"><meta name="application-name" content="JSON Formatter & Validator">
-<meta property="og:type" content="website"><meta property="og:title" content="JSON Formatter &amp; Validator — Free Online JSON Tool"><meta property="og:description" content="Format, validate, and minify JSON in your browser. Your data stays on your device."><meta property="og:url" content="https://json.redsite.in/"><meta property="og:site_name" content="Redsite">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="JSON Formatter &amp; Validator | Redsite"><meta name="twitter:description" content="Format and validate JSON for free. Private, local browser processing.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"JSON Formatter & Validator","url":"https://json.redsite.in/","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free browser based tool to format, validate, and minify JSON. Data stays on your device."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this JSON formatter free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Formatting, validating, and minifying JSON is free, with no account required."}},{"@type":"Question","name":"Is my JSON sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. JSON is processed in your browser and is not uploaded to Redsite."}},{"@type":"Question","name":"What does a JSON validator check?","acceptedAnswer":{"@type":"Answer","text":"It checks whether your input follows valid JSON syntax and reports a parsing error when it does not."}},{"@type":"Question","name":"Can I minify JSON?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose Minify to remove unnecessary whitespace while keeping the JSON data intact."}}]}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Formatter &amp; Validator — Format, Validate, and Minify JSON Online | Redsite</title>
+  <meta name="description" content="Format, validate, repair, and minify JSON online for free. Pinpoint syntax errors with line-number precision, auto-fix quotes and trailing commas. 100% private in-browser tool with zero uploads.">
+  <meta name="keywords" content="JSON formatter, JSON validator, minify JSON, prettify JSON, format JSON online, fix JSON syntax, JSON repair, JSON lint, offline JSON formatter">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://json.redsite.in/">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="application-name" content="JSON Formatter &amp; Validator">
+  <meta name="apple-mobile-web-app-title" content="JSON Formatter">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JSON Formatter &amp; Validator — Free Online Developer Tool">
+  <meta property="og:description" content="Format, validate, repair, and minify JSON online. Real-time syntax check, line error detection, and auto-fix. 100% client-side privacy.">
+  <meta property="og:url" content="https://json.redsite.in/">
+  <meta property="og:site_name" content="Redsite">
+  <meta property="og:image" content="https://json.redsite.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="JSON Formatter and Validator by Redsite">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JSON Formatter &amp; Validator | Redsite">
+  <meta name="twitter:description" content="Format, validate, repair, and minify JSON in your browser. Fast, accurate, and completely private with zero uploads.">
+  <meta name="twitter:image" content="https://json.redsite.in/og-image.png">
+  <meta name="twitter:image:alt" content="JSON Formatter and Validator preview banner">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Schema.org WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JSON Formatter & Validator",
+    "url": "https://json.redsite.in/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires HTML5 and modern JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "JSON Pretty Printing and Indentation",
+      "Real-time Syntax Validation and Line Error Detection",
+      "JSON Minification and Whitespace Removal",
+      "Automatic Repair of Single Quotes, Unquoted Keys, and Trailing Commas",
+      "Drag and Drop File Upload",
+      "One-Click Copy and File Download",
+      "100% Local In-Browser Processing"
+    ],
+    "description": "A free online browser-based tool to format, validate, auto-fix, and minify JSON data. All processing occurs locally on your device with zero data uploads.",
+    "author": {
+      "@type": "Organization",
+      "name": "Redsite",
+      "url": "https://redsite.in"
+    }
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this JSON formatter completely free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Formatting, validating, repairing, and minifying JSON is 100% free with no account, subscription, or usage limits required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Redsite upload, store, or log my JSON?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All JSON processing happens entirely on your local machine using your browser's native JavaScript parser. Your data never leaves your device and is never uploaded to any remote server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes JSON syntax errors and how can I fix them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common syntax errors include trailing commas after the last item, single quotes instead of double quotes, unquoted property keys, or comments. You can use our built-in Auto-Fix button to automatically resolve these common issues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the JSON Minifier work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minification removes all unnecessary whitespace, indentations, and newlines from your JSON payload while preserving all data. This reduces payload size and bandwidth consumption for web APIs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I format large JSON files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Because processing runs locally in your browser's memory, you can format multi-megabyte payloads quickly without being restricted by server upload limits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between JSON and a JavaScript Object?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JSON (JavaScript Object Notation) is a strict text-based data format defined by RFC 8259. In JSON, property names must be enclosed in double quotes, strings must use double quotes, trailing commas are invalid, and comments or functions are disallowed."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Format and Validate JSON Online",
+    "description": "Step-by-step instructions for pretty-printing, validating, and minifying JSON data using Redsite JSON Formatter.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Paste or Upload JSON",
+        "text": "Paste your raw JSON text into the input editor, drop a .json file, or click 'Load sample JSON'."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Select Indentation or Minify",
+        "text": "Choose your preferred indentation (2 spaces, 4 spaces, or Tabs) and click 'Format JSON', or click 'Minify' for a compact payload."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Fix Syntax Errors or Export",
+        "text": "Review any highlighted syntax errors or click 'Auto-Fix', then copy the result to your clipboard or download it as formatted.json."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Redsite",
+        "item": "https://redsite.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Developer Tools",
+        "item": "https://redsite.in/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "JSON Formatter & Validator",
+        "item": "https://json.redsite.in/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<header class="topbar"><a class="brand" href="https://redsite.in" aria-label="JSON Formatter and Validator, a Redsite product. Visit Redsite"><img class="product-logo" src="./favicon.svg" alt=""><span class="brand-copy"><span class="brand-title">JSON Formatter &amp; Validator</span><span class="brand-byline">A product by <b>REDSITE</b></span></span></a><nav><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="back-link" href="https://redsite.in/products">More tools <span aria-hidden="true">↗</span></a></nav></header>
-<main>
-<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> FREE BROWSER TOOL</div><h1>Clean JSON.<br><em>Clear errors.</em></h1><p class="intro">Format messy JSON, validate syntax, or minify a payload. Everything runs right here in your browser, so your data stays yours.</p><div class="trust-row"><span><b>01</b> No data uploads</span><span><b>02</b> No account needed</span><span><b>03</b> Free to use</span></div></div>
-<section class="tool-card" aria-label="JSON formatter and validator"><div class="card-head"><div><span class="step-label">JSON FORMATTER &amp; VALIDATOR</span><h2>Format your JSON</h2></div><div class="file-icon" aria-hidden="true">{ }</div></div><label class="input-label" for="jsonInput">JSON INPUT</label><textarea id="jsonInput" spellcheck="false" aria-describedby="status" placeholder='Paste JSON here, for example: {"name":"Redsite","active":true}'></textarea><div class="actions"><label class="indent-control" for="indentSize">Indent<select id="indentSize"><option value="2">2 spaces</option><option value="4">4 spaces</option><option value="tab">Tab</option></select></label><button id="formatBtn" class="primary-btn" type="button">Format JSON <span aria-hidden="true">→</span></button><button id="minifyBtn" class="secondary-btn" type="button">Minify</button></div><div class="result-head"><span class="input-label">FORMATTED OUTPUT</span><div><button id="copyBtn" class="text-btn" type="button" disabled>Copy</button><button id="downloadBtn" class="text-btn" type="button" disabled>Download</button></div></div><textarea id="jsonOutput" spellcheck="false" aria-label="Formatted JSON output" placeholder="Formatted JSON will appear here" readonly></textarea><p id="status" class="status" aria-live="polite">Paste JSON above or try the sample.</p><button id="sampleBtn" class="sample-btn" type="button">Load sample JSON</button></section>
-</section>
-<section class="how-section" id="how"><div class="section-heading"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>Three steps. <em>That’s it.</em></h2><p>Turn hard-to-read JSON into something useful.</p></div><div class="steps"><article><span class="step-number">01</span><h3>Paste your JSON</h3><p>Enter a JSON snippet or a complete response from an API.</p></article><article><span class="step-number">02</span><h3>Format or minify</h3><p>Choose readable indentation or compact output in one click.</p></article><article><span class="step-number">03</span><h3>Check and copy</h3><p>See whether the syntax is valid, then copy or download the result.</p></article></div></section>
-<section class="privacy-band"><div class="privacy-symbol" aria-hidden="true">◎</div><div><span class="eyebrow">PRIVATE BY DEFAULT</span><h2>Your data stays <em>on your device.</em></h2><p>Parsing and formatting happen locally in your browser. Your JSON is not uploaded or stored by Redsite.</p></div><span class="privacy-tag">LOCAL PROCESSING</span></section>
-<section class="faq-section" id="faq"><div class="section-heading"><div class="eyebrow">GOOD TO KNOW</div><h2>Questions, <em>answered.</em></h2></div><div class="faq-list"><details><summary>Is this JSON formatter free?</summary><p>Yes. It’s free to format, validate, and minify JSON. No account or subscription is required.</p></details><details><summary>Do you upload or store my JSON?</summary><p>No. Your input is parsed in your browser and is not sent to our servers.</p></details><details><summary>What happens if my JSON is invalid?</summary><p>The validator reports that the JSON could not be parsed and shows the browser’s syntax error so you can locate and fix the issue.</p></details><details><summary>What does minify do?</summary><p>Minifying removes indentation and other unnecessary whitespace. It preserves the data and structure.</p></details><details><summary>Which JSON values are supported?</summary><p>The tool uses your browser’s native JSON parser, which supports JSON objects, arrays, strings, numbers, booleans, and null.</p></details></div></section>
-</main><footer><span class="footer-product">JSON Formatter &amp; Validator <span>· A Redsite product</span></span><a href="https://redsite.in" target="_blank" rel="noopener noreferrer">Visit Redsite ↗</a><a href="./privacy/">Privacy</a></footer>
-<script type="module" src="app.js"></script>
-</body></html>
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <a class="brand" href="https://redsite.in" aria-label="JSON Formatter &amp; Validator by Redsite. Visit redsite.in">
+      <img class="product-logo" src="./favicon.svg" alt="" width="38" height="38">
+      <span class="brand-copy">
+        <span class="brand-title">JSON Formatter &amp; Validator</span>
+        <span class="brand-byline">A product by <b>REDSITE</b></span>
+      </span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <a href="#tool">Formatter</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#errors">Common Errors</a>
+      <a href="#faq">FAQ</a>
+      <a class="back-link" href="https://redsite.in/products" target="_blank" rel="noopener noreferrer">More tools <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-inner">
+        <div class="eyebrow">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>FREE DEVELOPER TOOL · 100% PRIVATE &amp; IN-BROWSER</span>
+        </div>
+        <h1>Clean JSON.<br><em>Clear errors.</em></h1>
+        <p class="intro">Format messy JSON, pinpoint syntax errors with line-number precision, auto-repair broken quotes and commas, or minify for production. Everything runs locally on your device — zero network requests, zero data uploads.</p>
+        <div class="trust-row">
+          <span><b>01</b> 100% Local processing</span>
+          <span><b>02</b> Zero data uploads</span>
+          <span><b>03</b> Auto-fix syntax errors</span>
+          <span><b>04</b> Free &amp; no account</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Tool Workbench -->
+    <section class="tool-section" id="tool" aria-label="JSON Formatter and Validator Workbench">
+      <div class="workbench-container" id="workbench">
+        <!-- Global Action Bar -->
+        <div class="toolbar" role="toolbar" aria-label="Formatter actions">
+          <div class="toolbar-left">
+            <label class="indent-control" for="indentSize">
+              <span>Indent:</span>
+              <select id="indentSize" aria-label="Indentation spacing">
+                <option value="2">2 spaces</option>
+                <option value="4">4 spaces</option>
+                <option value="tab">Tab</option>
+              </select>
+            </label>
+
+            <button id="formatBtn" class="primary-btn" type="button" title="Format and pretty-print JSON (Ctrl+Enter)">
+              <span>Format JSON</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <button id="minifyBtn" class="secondary-btn" type="button" title="Remove whitespace and minify (Ctrl+Shift+M)">
+              Minify
+            </button>
+            <button id="autoFixBtn" class="accent-btn" type="button" title="Repair single quotes, unquoted keys, and trailing commas">
+              <span aria-hidden="true">🛠</span> Auto-Fix
+            </button>
+          </div>
+
+          <div class="toolbar-right">
+            <button id="viewToggleBtn" class="text-pill-btn" type="button" title="Toggle side-by-side or stacked layout">
+              <span class="icon">⫾</span> Layout
+            </button>
+            <button id="sampleBtn" class="text-pill-btn" type="button" title="Load sample JSON payload">
+              Sample
+            </button>
+            <button id="pasteBtn" class="text-pill-btn" type="button" title="Paste from clipboard">
+              Paste
+            </button>
+            <button id="uploadBtn" class="text-pill-btn" type="button" title="Upload JSON file from disk">
+              Upload
+            </button>
+            <input type="file" id="fileInput" accept=".json,.txt" hidden aria-label="Upload JSON file">
+            <button id="clearBtn" class="text-pill-btn danger" type="button" title="Clear input and output">
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <!-- Status & Error Alert Bar -->
+        <div id="statusContainer" class="status-container idle" aria-live="polite">
+          <div class="status-main">
+            <span class="status-icon" aria-hidden="true"></span>
+            <span id="statusMessage">Paste or drop JSON above to begin.</span>
+          </div>
+          <div id="errorAction" class="error-actions" hidden>
+            <button id="jumpErrorBtn" class="small-alert-btn" type="button">Jump to error</button>
+            <button id="errorAutoFixBtn" class="small-alert-btn primary" type="button">Try Auto-Fix</button>
+          </div>
+        </div>
+
+        <!-- Dual Editor Panes -->
+        <div class="editor-grid">
+          <!-- Input Pane -->
+          <div class="editor-pane input-pane">
+            <div class="pane-header">
+              <div class="pane-title">
+                <span class="pane-badge">INPUT</span>
+                <label for="jsonInput">Raw JSON</label>
+              </div>
+              <div class="pane-meta">
+                <span id="inputStats" class="stats-badge">0 lines · 0 B</span>
+              </div>
+            </div>
+            <div class="textarea-wrapper">
+              <textarea
+                id="jsonInput"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                aria-describedby="statusMessage"
+                placeholder='Paste or drag &amp; drop JSON here, for example:
+{
+  "name": "Redsite",
+  "private": true,
+  "features": ["format", "validate", "minify"]
+}'
+              ></textarea>
+              <div id="dropZoneOverlay" class="dropzone-overlay" aria-hidden="true">
+                <span class="dropzone-text">Drop JSON file here to load</span>
+              </div>
+            </div>
+            <div class="pane-footer">
+              <span class="hint-text">Tip: Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or <kbd>Cmd</kbd>+<kbd>Enter</kbd>) to format</span>
+            </div>
+          </div>
+
+          <!-- Output Pane -->
+          <div class="editor-pane output-pane">
+            <div class="pane-header">
+              <div class="pane-title">
+                <span class="pane-badge success">OUTPUT</span>
+                <label for="jsonOutput">Formatted / Minified Result</label>
+              </div>
+              <div class="pane-meta">
+                <span id="outputStats" class="stats-badge">0 lines · 0 B</span>
+                <button id="wrapToggleBtn" class="tool-tiny-btn active" type="button">Wrap: On</button>
+                <button id="copyBtn" class="tool-tiny-btn highlight" type="button" disabled>Copy</button>
+                <button id="downloadBtn" class="tool-tiny-btn" type="button" disabled>Download</button>
+              </div>
+            </div>
+            <div class="textarea-wrapper">
+              <textarea
+                id="jsonOutput"
+                spellcheck="false"
+                aria-label="Formatted JSON output"
+                placeholder="Formatted JSON will appear here..."
+                readonly
+              ></textarea>
+            </div>
+            <div class="pane-footer">
+              <span class="hint-text">Valid syntax is automatically validated and formatted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-heading">
+        <div class="eyebrow">BUILT FOR MODERN DEVELOPERS</div>
+        <h2>Everything you need. <em>Zero clutter.</em></h2>
+        <p>A fast, private, and precise JSON suite that handles real-world payloads effortlessly.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">⚡</div>
+          <h3>Instant Pretty-Printing</h3>
+          <p>Format unindented or messy JSON payloads into clean, readable code with customizable 2-space, 4-space, or Tab indentation.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🔍</div>
+          <h3>Precision Error Diagnostics</h3>
+          <p>Catch syntax traps instantly. The validator calculates the exact line number and column of parse errors and lets you jump directly to the issue.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🛠</div>
+          <h3>Smart Auto-Repair</h3>
+          <p>Pasted JavaScript objects with single quotes, unquoted keys, or trailing commas? Click Auto-Fix to automatically convert them to valid RFC 8259 JSON.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📦</div>
+          <h3>High-Ratio Minifier</h3>
+          <p>Strip unnecessary whitespace, line breaks, and indentation in one click to compress payload sizes for production APIs and bandwidth efficiency.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🔒</div>
+          <h3>100% In-Browser Privacy</h3>
+          <p>Your JSON never leaves your machine. Processing runs purely on your device using native browser engines. No server requests, no cookies, no tracking.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📂</div>
+          <h3>Drag &amp; Drop &amp; Export</h3>
+          <p>Drag .json files directly onto the editor, paste from clipboard with one click, and export your formatted results instantly as clean downloadable files.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section" id="how">
+      <div class="section-heading">
+        <div class="eyebrow">SIMPLE WORKFLOW</div>
+        <h2>Three steps. <em>That’s it.</em></h2>
+        <p>Turn unreadable JSON into production-ready data in seconds.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Input your JSON</h3>
+          <p>Paste your JSON snippet, drag and drop a .json file, or load our sample payload to experiment.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Format, Minify, or Auto-Fix</h3>
+          <p>Select your indentation preference, repair syntax errors with one click, or compress into a single compact line.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Validate &amp; Export</h3>
+          <p>Verify that your JSON syntax is 100% valid, then copy the result to your clipboard or download it as a .json file.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Common JSON Syntax Errors Section (SEO & Developer Education) -->
+    <section class="errors-section" id="errors">
+      <div class="section-heading">
+        <div class="eyebrow">DEVELOPER REFERENCE</div>
+        <h2>Common JSON syntax errors <em>&amp; how to fix them.</em></h2>
+        <p>JSON is strictly standardized under RFC 8259. Here is how to fix the most frequent syntax mistakes.</p>
+      </div>
+
+      <div class="errors-grid">
+        <article class="error-item">
+          <h3>1. Trailing Commas</h3>
+          <p>In standard JSON, a comma after the last property or array element causes a parse failure.</p>
+          <div class="code-compare">
+            <div class="code-box invalid">
+              <span class="code-label">❌ Invalid</span>
+              <code>{ "id": 1, "active": true, }</code>
+            </div>
+            <div class="code-box valid">
+              <span class="code-label">✓ Valid</span>
+              <code>{ "id": 1, "active": true }</code>
+            </div>
+          </div>
+        </article>
+
+        <article class="error-item">
+          <h3>2. Single Quotes Instead of Double Quotes</h3>
+          <p>JSON strings and property keys must strictly use double quotation marks (<code>"</code>), not single quotes (<code>'</code>).</p>
+          <div class="code-compare">
+            <div class="code-box invalid">
+              <span class="code-label">❌ Invalid</span>
+              <code>{'status': 'success'}</code>
+            </div>
+            <div class="code-box valid">
+              <span class="code-label">✓ Valid</span>
+              <code>{"status": "success"}</code>
+            </div>
+          </div>
+        </article>
+
+        <article class="error-item">
+          <h3>3. Unquoted Property Names</h3>
+          <p>Unlike regular JavaScript objects where keys can be bare identifiers, all JSON keys must be wrapped in double quotes.</p>
+          <div class="code-compare">
+            <div class="code-box invalid">
+              <span class="code-label">❌ Invalid</span>
+              <code>{ username: "alex", age: 28 }</code>
+            </div>
+            <div class="code-box valid">
+              <span class="code-label">✓ Valid</span>
+              <code>{ "username": "alex", "age": 28 }</code>
+            </div>
+          </div>
+        </article>
+
+        <article class="error-item">
+          <h3>4. Comments in JSON</h3>
+          <p>Standard JSON does not support inline comments (<code>//</code>) or multi-line comments (<code>/* ... */</code>). Strip comments before parsing.</p>
+          <div class="code-compare">
+            <div class="code-box invalid">
+              <span class="code-label">❌ Invalid</span>
+              <code>{ "version": 1 // current }</code>
+            </div>
+            <div class="code-box valid">
+              <span class="code-label">✓ Valid</span>
+              <code>{ "version": 1 }</code>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Privacy Banner -->
+    <section class="privacy-band" aria-label="Privacy Guarantee">
+      <div class="privacy-symbol" aria-hidden="true">◎</div>
+      <div class="privacy-content">
+        <div class="eyebrow">100% PRIVATE &amp; SECURE</div>
+        <h2>Your data stays <em>on your device.</em></h2>
+        <p>Parsing, validation, and minification happen strictly on your local machine using standard JavaScript engine primitives. Your JSON is never transmitted, tracked, or stored by Redsite.</p>
+      </div>
+      <span class="privacy-tag">LOCAL PROCESSING ONLY</span>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="faq-layout">
+        <div class="section-heading faq-heading">
+          <div class="eyebrow">GOOD TO KNOW</div>
+          <h2>Frequently asked <em>questions.</em></h2>
+          <p>Got questions about formatting, privacy, or JSON syntax? Find answers below.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Is this JSON formatter completely free?</summary>
+            <p>Yes. Formatting, validating, repairing, and minifying JSON is 100% free with no account, subscription, or usage limits required.</p>
+          </details>
+
+          <details>
+            <summary>Does Redsite upload, store, or log my JSON?</summary>
+            <p>No. All JSON processing happens entirely on your local machine using your browser's native JavaScript parser. Your data never leaves your device and is never uploaded to any remote server.</p>
+          </details>
+
+          <details>
+            <summary>What causes JSON syntax errors and how can I fix them?</summary>
+            <p>Common syntax errors include trailing commas after the last item, single quotes instead of double quotes, unquoted property keys, or comments. You can use our built-in <strong>Auto-Fix</strong> button to automatically resolve these common issues.</p>
+          </details>
+
+          <details>
+            <summary>How does the JSON Minifier work?</summary>
+            <p>Minification removes all unnecessary whitespace, indentations, and newlines from your JSON payload while preserving all data. This reduces payload size and bandwidth consumption for web APIs.</p>
+          </details>
+
+          <details>
+            <summary>Can I format large JSON files?</summary>
+            <p>Yes. Because processing runs locally in your browser's memory, you can format multi-megabyte payloads quickly without being restricted by server upload limits.</p>
+          </details>
+
+          <details>
+            <summary>What is the difference between JSON and a JavaScript Object?</summary>
+            <p>JSON (JavaScript Object Notation) is a strict text-based data format defined by RFC 8259. In JSON, property names must be enclosed in double quotes, strings must use double quotes, trailing commas are invalid, and comments or functions are disallowed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-product">JSON Formatter &amp; Validator</span>
+        <span class="footer-byline">· A Redsite developer product</span>
+      </div>
+      <div class="footer-links">
+        <a href="#tool">Back to top ↑</a>
+        <a href="https://redsite.in" target="_blank" rel="noopener noreferrer">Visit Redsite ↗</a>
+        <a href="https://redsite.in/products" target="_blank" rel="noopener noreferrer">All Tools</a>
+        <a href="./privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
