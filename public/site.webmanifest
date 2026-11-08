@@ -1,0 +1,16 @@
+{
+  "name": "JSON Formatter & Validator by Redsite",
+  "short_name": "JSON Formatter",
+  "description": "Format, validate, repair, and minify JSON online. 100% private in-browser developer tool.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
